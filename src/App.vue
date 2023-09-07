@@ -57,7 +57,7 @@
     );
 
     function formatNumber(value) {
-        const decimal = value.toString().split(".");
+        const [whole, decimal] = value.toString().split(".");
         if (!decimal) return value;
 
         const digits = Math.min(decimal.length, 5);
